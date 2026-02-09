@@ -136,3 +136,16 @@ if (paymentRadios && upiBox) {
     });
   });
 }
+document.querySelectorAll('input[name="payment"]').forEach(radio => {
+  radio.addEventListener('change', () => {
+    const upiBox = document.getElementById("upi-box");
+    if (!upiBox) return;
+
+    if (radio.value === "UPI") {
+      upiBox.style.display = "block";
+    } else {
+      upiBox.style.display = "none";
+    }
+  });
+});
+
