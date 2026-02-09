@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nai's Store – Cart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">Nai's Store</a>
+
+    <input class="search" type="text" placeholder="Search products">
+
+    <nav class="links">
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h2 class="page-title">Your Cart</h2>
+
+    <div class="checkout-container">
+
+  <h2 class="checkout-title">Customer Details</h2>
+
+  <form id="checkout-form">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <textarea id="address" placeholder="Full Delivery Address" required></textarea>
+
+    <h4>Payment Method</h4>
+
+    <div class="payment-group">
+      <label class="radio">
+        <input type="radio" name="payment" value="COD" required>
+        <span>Cash on Delivery</span>
+      </label>
+
+      <label class="radio">
+        <input type="radio" name="payment" value="UPI">
+        <span>UPI</span>
+      </label>
+    </div>
+
+    <button type="submit" class="btn">Place Order</button>
+  </form>
+
+</div>
+<div id="upi-box" style="display:none; margin-top:20px;">
+  <p><strong>Pay via UPI</strong></p>
+  <img src="https://i.imgur.com/0KFBHTB.png" alt="UPI QR" style="max-width:200px;">
+  <p style="margin-top:10px;">UPI ID: <strong>naisstore@upi</strong></p>
+  <p style="font-size:13px; color:#555;">
+    After payment, please place the order. We will verify and confirm.
+  </p>
+</div>
+
+  </main>
+
+  <script src="js/main.js"></script>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <strong>Nai's Store</strong>
+      <p>Handmade gifts & curated products.</p>
+    </div>
+
+    <div class="footer-col">
+      <strong>Quick Links</strong>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="shop.html">Shop</a>
+      <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Policies</strong>
+      <a href="cancellation.html">Cancellation Policy</a>
+      <a href="refund.html">Return & Refund</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Nai's Store. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
